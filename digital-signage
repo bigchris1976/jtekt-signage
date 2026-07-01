@@ -1,0 +1,15 @@
+digital-signage/
+│
+├── .nojekyll
+├── index.html
+│
+├── css/
+│   └── style.css
+│
+├── js/
+│   └── script.js
+│
+└── images/
+    ├── slide1.jpg
+    ├── slide2.jpg
+    └── slide3.jpg
