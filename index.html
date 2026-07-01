@@ -1,15 +1,42 @@
-digital-signage/
-│
-├── .nojekyll
-├── index.html
-│
-├── css/
-│   └── style.css
-│
-├── js/
-│   └── script.js
-│
-└── images/
-    ├── slide1.jpg
-    ├── slide2.jpg
-    └── slide3.jpg
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Signage Board</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="clock" id="clock"></div>
+
+<div class="slideshow">
+
+    <div class="slide active">
+        <img src="images/slide1.jpg" alt="Slide 1">
+        <div class="caption">
+            Welcome to Our Facility
+        </div>
+    </div>
+
+    <div class="slide">
+        <img src="images/slide2.jpg" alt="Slide 2">
+        <div class="caption">
+            Company Announcements
+        </div>
+    </div>
+
+    <div class="slide">
+        <img src="images/slide3.jpg" alt="Slide 3">
+        <div class="caption">
+            IT Service Desk Information
+        </div>
+    </div>
+
+</div>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
+``
