@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Digital Signage Board</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #0f172a;
+    color: white;
+    overflow: hidden;
+}
+
+.slide {
+    display: none;
+    height: 100vh;
+    padding: 50px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.slide.active {
+    display: flex;
+}
+
+.slide h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+.slide p {
+    font-size: 2rem;
+}
+
+.slide1 {
+    background: #1e3a8a;
+}
+
+.slide2 {
+    background: #065f46;
+}
+
+.slide3 {
+    background: #7c2d12;
+}
+
+.slide4 {
+    background: #581c87;
+}
+
+.clock {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+</style>
+</head>
+<body>
+
+<div class="clock" id="clock"></div>
+
+<div class="slide slide1 active">
+    <h1>Welcome</h1>
+    <p>Company Digital Signage Board</p>
+</div>
+
+<div class="slide slide2">
+    <h1>Announcements</h1>
+    <p>Submit timesheets by Friday.</p>
+</div>
+
+<div class="slide slide3">
+    <h1>Safety Message</h1>
+    <p>Report hazards immediately.</p>
+</div>
+
+<div class="slide slide4">
+    <h1>IT Help Desk</h1>
+    <p>Open a ticket through the service portal.</p>
+</div>
+
+<script>
+
+// Live Clock
+function updateClock() {
+    document.getElementById('clock').innerHTML =
+        new Date().toLocaleString();
+}
+
+setInterval(updateClock, 1000);
+updateClock();
+
+// Slide Rotation Every 7 Seconds
+let currentSlide = 0;
+const slides = document.querySelectorAll('.slide');
+
+function showNextSlide() {
+
+    slides[currentSlide].classList.remove('active');
+
+    currentSlide++;
+
+    if (currentSlide >= slides.length) {
+        currentSlide = 0;
+    }
+
+    slides[currentSlide].classList.add('active');
+}
+
+setInterval(showNextSlide, 7000);
+
+</script>
+
+</body>
+</html>
