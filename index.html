@@ -8,26 +8,26 @@
 </head>
 <body>
 
-<div class="clock" id="clock"></div>
+<div class="clock" id="clock" role="timer" aria-live="polite" aria-label="Current time and date"></div>
 
-<div class="slideshow">
+<div class="slideshow" role="region" aria-label="Digital signage slideshow" aria-live="polite">
 
-    <div class="slide active">
-        <img src="images/slide1.jpg" alt="Slide 1">
+    <div class="slide active" role="article" aria-label="Slide 1 of 3">
+        <img src="images/slide1.jpg" alt="Welcome to Our Facility - Slide 1 of the digital signage board">
         <div class="caption">
             Welcome to Our Facility
         </div>
     </div>
 
-    <div class="slide">
-        <img src="images/slide2.jpg" alt="Slide 2">
+    <div class="slide" role="article" aria-label="Slide 2 of 3">
+        <img src="images/slide2.jpg" alt="Company Announcements - Slide 2 of the digital signage board">
         <div class="caption">
             Company Announcements
         </div>
     </div>
 
-    <div class="slide">
-        <img src="images/slide3.jpg" alt="Slide 3">
+    <div class="slide" role="article" aria-label="Slide 3 of 3">
+        <img src="images/slide3.jpg" alt="IT Service Desk Information - Slide 3 of the digital signage board">
         <div class="caption">
             IT Service Desk Information
         </div>
@@ -35,8 +35,13 @@
 
 </div>
 
+<noscript>
+    <div class="noscript-warning">
+        <p>JavaScript is required for this digital signage board to function. Please enable JavaScript in your browser.</p>
+    </div>
+</noscript>
+
 <script src="js/script.js"></script>
 
 </body>
 </html>
-``
